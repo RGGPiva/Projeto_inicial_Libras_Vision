@@ -1,22 +1,61 @@
-esse é o  meu readme do git hub, quero um readme mellhorr e mais bem elaborrado, para que gere impacto ao visitante
-
 # Libras Vision Project
 
-Projeto em Python para reconhecimento de sinais com MediaPipe e Random Forest.
+Sistema inicial de reconhecimento visual de sinais em Libras utilizando **MediaPipe**, **extração de landmarks** e **Random Forest**, desenvolvido como prova de conceito para uma linha de pesquisa em **visão computacional aplicada à acessibilidade comunicacional**.
 
-## Estrutura
-- `data/`: imagens organizadas por classe
-- `artifacts/`: arquivos gerados pelo treino
-- `scripts/`: scripts principais
+Este repositório representa a etapa inicial de um projeto maior, voltado à construção de soluções inteligentes para apoio à compreensão de Libras em tempo real, com potencial de evolução para arquiteturas multimodais mais robustas, incluindo modelagem temporal e inferência semântica contextual.
 
-## Etapas
-1. Criar dataset com `create_dataset.py`
-2. Treinar classificador com `train_classifier.py`
-3. Buscar hiperparâmetros com `hyperparameter_search.py`
-4. Testar inferência com webcam em `inference_classifier.py`
+---
 
-## Requisitos
-Instalar dependências com:
+## Visão Geral
 
-```bash
-pip install -r requirements.txt
+O projeto utiliza a câmera e técnicas de visão computacional para detectar a mão do usuário, extrair landmarks com o MediaPipe e classificar padrões visuais associados a sinais ou letras previamente treinadas.
+
+A proposta atual funciona como um **protótipo inicial**, validando a viabilidade de um pipeline composto por:
+
+- captura de imagem
+- extração de landmarks
+- organização de dataset
+- treinamento supervisionado
+- inferência em tempo real com webcam
+
+---
+
+## Motivação
+
+A comunicação em Libras ainda enfrenta barreiras importantes em diferentes contextos acadêmicos, institucionais e sociais. Este projeto nasce da intenção de explorar caminhos computacionais para aproximar **inteligência artificial**, **visão computacional** e **tecnologias assistivas**, criando bases para soluções futuras com maior capacidade de interpretação e contextualização semântica.
+
+Mais do que um simples classificador visual, este repositório documenta o início de uma agenda de pesquisa voltada à construção de sistemas de apoio à mediação em Libras.
+
+---
+
+## Tecnologias Utilizadas
+
+- **Python**
+- **MediaPipe**
+- **OpenCV**
+- **NumPy**
+- **Scikit-learn**
+- **Random Forest**
+
+---
+
+## Estrutura do Projeto
+
+```text
+LibrasVisionProject/
+│
+├── data/                 # Imagens organizadas por classe
+├── artifacts/            # Arquivos gerados no processamento
+│   ├── data.pickle
+│   ├── model.p
+│   └── hyperparameter_results.csv
+│
+├── scripts/              # Scripts principais do pipeline
+│   ├── create_dataset.py
+│   ├── train_classifier.py
+│   ├── hyperparameter_search.py
+│   └── inference_classifier.py
+│
+├── requirements.txt      # Dependências do projeto
+├── .gitignore
+└── README.md
