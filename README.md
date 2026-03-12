@@ -38,29 +38,6 @@ Mais do que um simples classificador visual, este repositório documenta o iníc
 - **Random Forest**
 
 ---
-
-## Estrutura do Projeto
-
-```text
-LibrasVisionProject/
-│
-├── data/                 # Imagens organizadas por classe
-├── artifacts/            # Arquivos gerados no processamento
-│   ├── data.pickle
-│   ├── model.p
-│   └── hyperparameter_results.csv
-│
-├── scripts/              # Scripts principais do pipeline
-│   ├── create_dataset.py
-│   ├── train_classifier.py
-│   ├── hyperparameter_search.py
-│   └── inference_classifier.py
-│
-├── requirements.txt      # Dependências do projeto
-├── .gitignore
-└── README.md
-
-
 Fluxo de Execução
 
 O pipeline do projeto está organizado em quatro etapas principais:
@@ -207,3 +184,29 @@ tecnologias educacionais
 Libras e inclusão digital
 
 GitHub: RGGPiva
+
+
+## Estrutura do Projeto
+
+```text
+
+
+LibrasVisionProject/
+│
+├── data/                 # Imagens organizadas por classe
+├── artifacts/            # Arquivos gerados no processamento
+│   ├── data.pickle
+│   ├── model.p
+│   └── hyperparameter_results.csv
+│
+├── scripts/              # Scripts principais do pipeline
+│   ├── create_dataset.py
+│   ├── train_classifier.py
+│   ├── hyperparameter_search.py
+│   └── inference_classifier.py
+│
+├── requirements.txt      # Dependências do projeto
+├── .gitignore
+└── README.md
+
+  
